@@ -105,7 +105,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:support-v4 than 26.1.0 is available: 27.0.1"
+        message="A newer version of com.android.support:support-v4 than 26.1.0 is available: 27.0.2"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -122,7 +122,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:support-v13 than 26.1.0 is available: 27.0.1"
+        message="A newer version of com.android.support:support-v13 than 26.1.0 is available: 27.0.2"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -139,7 +139,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:design than 26.1.0 is available: 27.0.1"
+        message="A newer version of com.android.support:design than 26.1.0 is available: 27.0.2"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -156,7 +156,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:recyclerview-v7 than 26.1.0 is available: 27.0.1"
+        message="A newer version of com.android.support:recyclerview-v7 than 26.1.0 is available: 27.0.2"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -173,7 +173,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:appcompat-v7 than 26.1.0 is available: 27.0.1"
+        message="A newer version of com.android.support:appcompat-v7 than 26.1.0 is available: 27.0.2"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -190,7 +190,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:cardview-v7 than 26.1.0 is available: 27.0.1"
+        message="A newer version of com.android.support:cardview-v7 than 26.1.0 is available: 27.0.2"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -201,6 +201,142 @@
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
             line="31"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.gms:play-services-analytics than 11.6.0 is available: 11.6.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1=" api &quot;com.google.android.gms:play-services-analytics:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
+            line="33"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.gms:play-services-base than 11.6.0 is available: 11.6.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1=" api &quot;com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
+            line="34"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.gms:play-services-location than 11.6.0 is available: 11.6.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1=" api &quot;com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
+            line="35"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.firebase:firebase-core than 11.6.0 is available: 11.6.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1=" api &quot;com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
+            line="37"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.firebase:firebase-appindexing than 11.6.0 is available: 11.6.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1=" api &quot;com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
+            line="38"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.firebase:firebase-messaging than 11.6.0 is available: 11.6.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1=" api &quot;com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
+            line="39"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.firebase:firebase-invites than 11.6.0 is available: 11.6.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1=" api &quot;com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
+            line="40"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.firebase:firebase-perf than 11.6.0 is available: 11.6.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1=" api &quot;com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
+            line="41"
             column="2"/>
     </issue>
 
