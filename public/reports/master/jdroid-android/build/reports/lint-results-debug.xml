@@ -479,6 +479,42 @@
     <issue
         id="UnusedResources"
         severity="Warning"
+        message="The resource `R.drawable.jdroid_ic_instagram_24dp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/drawable-hdpi/jdroid_ic_instagram_24dp.png"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/drawable-mdpi/jdroid_ic_instagram_24dp.png"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/drawable-xhdpi/jdroid_ic_instagram_24dp.png"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/drawable-xxhdpi/jdroid_ic_instagram_24dp.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.jdroid_ic_linkedin_24dp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;vector android:height=&quot;24dp&quot; android:viewportHeight=&quot;512.0&quot;"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/drawable/jdroid_ic_linkedin_24dp.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
         message="The resource `R.drawable.jdroid_ic_mail_outline_black_24dp` appears to be unused"
         category="Performance"
         priority="3"
@@ -841,6 +877,48 @@
     <issue
         id="UnusedResources"
         severity="Warning"
+        message="The resource `R.string.jdroid_instagram` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_instagram&quot;>Instagram&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
+            line="84"
+            column="10"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
+            line="86"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.jdroid_linkedin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_linkedin&quot;>LinkedIn&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
+            line="87"
+            column="10"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
+            line="89"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
         message="The resource `R.string.jdroid_more` appears to be unused"
         category="Performance"
         priority="3"
@@ -851,11 +929,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="92"
+            line="98"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="94"
+            line="100"
             column="10"/>
     </issue>
 
