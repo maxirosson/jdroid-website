@@ -173,10 +173,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 74 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 82 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Dec 18 01:05:44 UTC 2017      </nav>
+Check performed at Thu Dec 21 10:10:39 UTC 2017      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -187,6 +187,7 @@ Check performed at Mon Dec 18 01:05:44 UTC 2017      </nav>
       <a class="mdl-navigation__link" href="#DefaultLocale"><i class="material-icons warning-icon">warning</i>Implied default locale in case conversion (1)</a>
       <a class="mdl-navigation__link" href="#UnusedAttribute"><i class="material-icons warning-icon">warning</i>Attribute unused on older versions (1)</a>
       <a class="mdl-navigation__link" href="#InflateParams"><i class="material-icons warning-icon">warning</i>Layout Inflation without a Parent (1)</a>
+      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (8)</a>
       <a class="mdl-navigation__link" href="#GetInstance"><i class="material-icons warning-icon">warning</i>Cipher.getInstance with ECB (1)</a>
       <a class="mdl-navigation__link" href="#TrulyRandom"><i class="material-icons warning-icon">warning</i>Weak RNG (1)</a>
       <a class="mdl-navigation__link" href="#ExportedReceiver"><i class="material-icons warning-icon">warning</i>Receiver does not require permission (1)</a>
@@ -224,6 +225,9 @@ Check performed at Mon Dec 18 01:05:44 UTC 2017      </nav>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#InflateParams">InflateParams</a>: Layout Inflation without a Parent</td></tr>
+<tr>
+<td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Security">Security</a>
 </td></tr>
 <tr>
@@ -482,6 +486,115 @@ When inflating a layout, avoid passing in null as the parent view, since otherwi
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationInflateParamsLink" onclick="reveal('explanationInflateParams');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="InflateParamsCardLink" onclick="hideid('InflateParamsCard');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="GradleDependency"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDependencyCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Obsolete Gradle Dependency</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:33</span>: <span class="message">A newer version of com.google.android.gms:play-services-analytics than 11.6.2 is available: 11.8.0</span><br /><pre class="errorlines">
+<span class="lineno"> 30 </span>    api <span class="string">"com.android.support:appcompat-v7:${ANDROID_SUPPORT_VERSION}"</span>
+<span class="lineno"> 31 </span>    api <span class="string">"com.android.support:cardview-v7:${ANDROID_SUPPORT_VERSION}"</span>
+<span class="lineno"> 32 </span>
+<span class="caretline"><span class="lineno"> 33 </span>    <span class="warning">api <span class="string">"com.google.android.gms:play-services-analytics:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 34 </span>    api <span class="string">"com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 35 </span>    api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+</pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:34</span>: <span class="message">A newer version of com.google.android.gms:play-services-base than 11.6.2 is available: 11.8.0</span><br /><pre class="errorlines">
+<span class="lineno"> 31 </span>    api <span class="string">"com.android.support:cardview-v7:${ANDROID_SUPPORT_VERSION}"</span>
+<span class="lineno"> 32 </span>
+<span class="lineno"> 33 </span>    api <span class="string">"com.google.android.gms:play-services-analytics:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 34 </span>    <span class="warning">api <span class="string">"com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 35 </span>    api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 36 </span>
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:35</span>: <span class="message">A newer version of com.google.android.gms:play-services-location than 11.6.2 is available: 11.8.0</span><br /><pre class="errorlines">
+<span class="lineno"> 32 </span>
+<span class="lineno"> 33 </span>    api <span class="string">"com.google.android.gms:play-services-analytics:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 34 </span>    api <span class="string">"com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 35 </span>    <span class="warning">api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 36 </span>
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:37</span>: <span class="message">A newer version of com.google.firebase:firebase-core than 11.6.2 is available: 11.8.0</span><br /><pre class="errorlines">
+<span class="lineno"> 34 </span>    api <span class="string">"com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 35 </span>    api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 36 </span>
+<span class="caretline"><span class="lineno"> 37 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 39 </span>    api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 40 </span>    api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:38</span>: <span class="message">A newer version of com.google.firebase:firebase-appindexing than 11.6.2 is available: 11.8.0</span><br /><pre class="errorlines">
+<span class="lineno"> 35 </span>    api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 36 </span>
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 38 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 39 </span>    api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 40 </span>    api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 41 </span>    api <span class="string">"com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}"</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:39</span>: <span class="message">A newer version of com.google.firebase:firebase-messaging than 11.6.2 is available: 11.8.0</span><br /><pre class="errorlines">
+<span class="lineno"> 36 </span>
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 39 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 40 </span>    api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 41 </span>    api <span class="string">"com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 42 </span>    api <span class="string">'com.firebase:firebase-jobdispatcher:0.6.0'</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:40</span>: <span class="message">A newer version of com.google.firebase:firebase-invites than 11.6.2 is available: 11.8.0</span><br /><pre class="errorlines">
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 39 </span>    api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 40 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 41 </span>    api <span class="string">"com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 42 </span>    api <span class="string">'com.firebase:firebase-jobdispatcher:0.6.0'</span>
+</pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:41</span>: <span class="message">A newer version of com.google.firebase:firebase-perf than 11.6.2 is available: 11.8.0</span><br /><pre class="errorlines">
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 39 </span>    api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 40 </span>    api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 41 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 42 </span>    api <span class="string">'com.firebase:firebase-jobdispatcher:0.6.0'</span>
+<span class="lineno"> 43 </span>
+<span class="lineno"> 44 </span>    debugApi(<span class="string">"com.squareup.leakcanary:leakcanary-android:${LEAK_CANARY_VERSION}"</span>) { force = <span class="keyword">true</span> }
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
+This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">GradleDependency</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 4/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
 Dismiss</button>            </div>
             </div>
           </section>
