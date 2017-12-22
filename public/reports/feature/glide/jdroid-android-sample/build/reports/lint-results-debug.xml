@@ -198,11 +198,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/values/strings.xml"
-            line="184"
+            line="185"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/values-es/strings.xml"
-            line="184"
+            line="185"
             column="10"/>
     </issue>
 
@@ -219,11 +219,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/values/strings.xml"
-            line="226"
+            line="227"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/values-es/strings.xml"
-            line="226"
+            line="227"
             column="10"/>
     </issue>
 
