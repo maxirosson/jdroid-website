@@ -19,23 +19,6 @@
     </issue>
 
     <issue
-        id="ObsoleteLayoutParam"
-        severity="Warning"
-        message="Invalid layout param in a `LinearLayout`: `layout_centerInParent`"
-        category="Performance"
-        priority="6"
-        summary="Obsolete layout params"
-        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
-        errorLine1="  android:layout_centerInParent=&quot;true&quot; />"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/layout/glide_fragment.xml"
-            line="15"
-            column="3"/>
-    </issue>
-
-    <issue
         id="Overdraw"
         severity="Warning"
         message="Possible overdraw: Root element paints background `@color/jdroid_grey` with a theme that also paints a background (inferred theme is `@style/App.Theme`)"
