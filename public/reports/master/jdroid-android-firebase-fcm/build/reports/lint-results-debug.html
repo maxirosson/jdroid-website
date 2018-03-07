@@ -176,7 +176,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 2 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Tue Mar 06 18:22:57 UTC 2018      </nav>
+Check performed at Wed Mar 07 01:46:19 UTC 2018      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -225,14 +225,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/jdroid/android/firebase/fcm/FcmRegistrationCommand.java">../../src/main/java/com/jdroid/android/firebase/fcm/FcmRegistrationCommand.java</a>:65</span>: <span class="message">getToken() called without defining onTokenRefresh callback.</span><br /><pre class="errorlines">
-<span class="lineno"> 62 </span>                registrationToken = FirebaseInstanceId.getInstance().getToken(senderId, <span class="string">"FCM"</span>);
-<span class="lineno"> 63 </span>                LOGGER.info(<span class="string">"Registration token for sender id ["</span> + senderId + <span class="string">"]: "</span> + registrationToken);
-<span class="lineno"> 64 </span>            } <span class="keyword">else</span> {
-<span class="caretline"><span class="lineno"> 65 </span>                registrationToken = <span class="warning">FirebaseInstanceId.getInstance().getToken()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 66 </span>                LOGGER.info(<span class="string">"Registration token for default sender id: "</span> + registrationToken);
-<span class="lineno"> 67 </span>            }
-<span class="lineno"> 68 </span>            <span class="keyword">return</span> registrationToken;
+<span class="location"><a href="../../src/main/java/com/jdroid/android/firebase/fcm/FcmRegistrationCommand.java">../../src/main/java/com/jdroid/android/firebase/fcm/FcmRegistrationCommand.java</a>:66</span>: <span class="message">getToken() called without defining onTokenRefresh callback.</span><br /><pre class="errorlines">
+<span class="lineno"> 63 </span>                registrationToken = FirebaseInstanceId.getInstance().getToken(senderId, <span class="string">"FCM"</span>);
+<span class="lineno"> 64 </span>                LOGGER.info(<span class="string">"Registration token for sender id ["</span> + senderId + <span class="string">"]: "</span> + registrationToken);
+<span class="lineno"> 65 </span>            } <span class="keyword">else</span> {
+<span class="caretline"><span class="lineno"> 66 </span>                registrationToken = <span class="warning">FirebaseInstanceId.getInstance().getToken()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 67 </span>                LOGGER.info(<span class="string">"Registration token for default sender id: "</span> + registrationToken);
+<span class="lineno"> 68 </span>            }
+<span class="lineno"> 69 </span>            <span class="keyword">return</span> registrationToken;
 </pre>
 
 </div>

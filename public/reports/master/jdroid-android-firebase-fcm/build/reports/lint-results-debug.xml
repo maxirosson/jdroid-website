@@ -15,7 +15,7 @@
         errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android-firebase-fcm/src/main/java/com/jdroid/android/firebase/fcm/FcmRegistrationCommand.java"
-            line="65"
+            line="66"
             column="25"/>
     </issue>
 
