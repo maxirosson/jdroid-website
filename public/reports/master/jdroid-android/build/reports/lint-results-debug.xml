@@ -532,6 +532,23 @@
     <issue
         id="UnusedResources"
         severity="Warning"
+        message="The resource `R.layout.jdroid_rate_app_view` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;android.support.v7.widget.CardView xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; style=&quot;@style/jdroid_cardViewFullMarginStyle&quot;>"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/layout/jdroid_rate_app_view.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
         message="The resource `R.layout.jdroid_share_section` appears to be unused"
         category="Performance"
         priority="3"
@@ -682,6 +699,23 @@
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
             line="24"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.jdroid_rateApp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_rateApp&quot; tools:ignore=&quot;MissingTranslation&quot;>Rate App&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/debug/res/values/strings.xml"
+            line="49"
             column="10"/>
     </issue>
 
@@ -913,6 +947,153 @@
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
             line="89"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.jdroid_rateAppEnjoying` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_rateAppEnjoying&quot;>Enjoying %1$s?&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
+            line="90"
+            column="10"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
+            line="92"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.jdroid_rateAppGooglePlay` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_rateAppGooglePlay&quot;>How about a rating on Google Play, then?&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
+            line="91"
+            column="10"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
+            line="93"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.jdroid_rateAppFeedback` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_rateAppFeedback&quot;>Would you mind giving us some feedback?&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
+            line="92"
+            column="10"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
+            line="94"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.jdroid_rateAppNotReally` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_rateAppNotReally&quot;>Not really&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
+            line="93"
+            column="10"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
+            line="95"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.jdroid_rateAppNotThanks` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_rateAppNotThanks&quot;>No, thanks&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
+            line="94"
+            column="10"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
+            line="96"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.jdroid_rateAppOkSure` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_rateAppOkSure&quot;>OK, sure&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
+            line="95"
+            column="10"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
+            line="97"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.jdroid_rateAppYes` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;jdroid_rateAppYes&quot;>Yes!&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
+            line="96"
+            column="10"/>
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
+            line="98"
             column="10"/>
     </issue>
 
