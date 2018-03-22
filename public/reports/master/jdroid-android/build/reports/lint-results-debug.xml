@@ -50,27 +50,9 @@
     </issue>
 
     <issue
-        id="DefaultLocale"
-        severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="   tags.add(&quot;level&quot; + String.format(&quot;%02d&quot;, priorityLevel));"
-        errorLine2="                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/java/com/jdroid/android/exception/DefaultExceptionHandler.java"
-            line="135"
-            column="23"/>
-    </issue>
-
-    <issue
         id="UnusedAttribute"
         severity="Warning"
-        message="Attribute `fillType` is only used in API level 24 and higher (current min is 16)"
+        message="Attribute `fillType` is only used in API level 24 and higher (current min is 19)"
         category="Correctness"
         priority="6"
         summary="Attribute unused on older versions"
@@ -103,142 +85,6 @@
     </issue>
 
     <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.google.android.gms:play-services-analytics than 11.8.0 is available: 12.0.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1=" api &quot;com.google.android.gms:play-services-analytics:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
-        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
-            line="33"
-            column="2"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.google.android.gms:play-services-base than 11.8.0 is available: 12.0.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1=" api &quot;com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
-        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
-            line="34"
-            column="2"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.google.android.gms:play-services-location than 11.8.0 is available: 12.0.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1=" api &quot;com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
-        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
-            line="35"
-            column="2"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.google.firebase:firebase-core than 11.8.0 is available: 12.0.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1=" api &quot;com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
-        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
-            line="37"
-            column="2"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.google.firebase:firebase-appindexing than 11.8.0 is available: 12.0.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1=" api &quot;com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
-        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
-            line="38"
-            column="2"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.google.firebase:firebase-messaging than 11.8.0 is available: 12.0.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1=" api &quot;com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
-        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
-            line="39"
-            column="2"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.google.firebase:firebase-invites than 11.8.0 is available: 12.0.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1=" api &quot;com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
-        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
-            line="40"
-            column="2"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.google.firebase:firebase-perf than 11.8.0 is available: 12.0.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1=" api &quot;com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}&quot;"
-        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/build.gradle"
-            line="41"
-            column="2"/>
-    </issue>
-
-    <issue
         id="GetInstance"
         severity="Warning"
         message="ECB encryption mode should not be used (was &quot;AES/ECB/PKCS5Padding&quot;)"
@@ -252,24 +98,6 @@
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/java/com/jdroid/android/utils/AndroidEncryptionUtils.java"
             line="66"
             column="39"/>
-    </issue>
-
-    <issue
-        id="TrulyRandom"
-        severity="Warning"
-        message="Potentially insecure random numbers on Android 4.3 and older. Read https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html for more info."
-        category="Security"
-        priority="9"
-        summary="Weak RNG"
-        explanation="Key generation, signing, encryption, and random number generation may not receive cryptographically strong values due to improper initialization of the underlying PRNG on Android 4.3 and below.&#xA;&#xA;If your application relies on cryptographically secure random number generation you should apply the workaround described in https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html .&#xA;&#xA;This lint rule is mostly informational; it does not accurately detect whether cryptographically secure RNG is required, or whether the workaround has already been applied. After reading the blog entry and updating your code if necessary, you can disable this lint issue."
-        url="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
-        urls="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
-        errorLine1="   SecureRandom secureRandom = new SecureRandom();"
-        errorLine2="   ~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/java/com/jdroid/android/utils/AndroidEncryptionUtils.java"
-            line="95"
-            column="4"/>
     </issue>
 
     <issue
@@ -879,27 +707,6 @@
     <issue
         id="UnusedResources"
         severity="Warning"
-        message="The resource `R.string.jdroid_voiceSearch` appears to be unused"
-        category="Performance"
-        priority="3"
-        summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
-        errorLine1=" &lt;string name=&quot;jdroid_voiceSearch&quot;>Voice Search&lt;/string>"
-        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="61"
-            column="10"/>
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="63"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="UnusedResources"
-        severity="Warning"
         message="The resource `R.string.jdroid_sharingFailed` appears to be unused"
         category="Performance"
         priority="3"
@@ -910,11 +717,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="65"
+            line="64"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="67"
+            line="66"
             column="10"/>
     </issue>
 
@@ -931,11 +738,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="68"
+            line="67"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="70"
+            line="69"
             column="10"/>
     </issue>
 
@@ -952,11 +759,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="69"
+            line="68"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="71"
+            line="70"
             column="10"/>
     </issue>
 
@@ -973,11 +780,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="72"
+            line="71"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="74"
+            line="73"
             column="10"/>
     </issue>
 
@@ -994,11 +801,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="75"
+            line="74"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="77"
+            line="76"
             column="10"/>
     </issue>
 
@@ -1015,11 +822,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="78"
+            line="77"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="80"
+            line="79"
             column="10"/>
     </issue>
 
@@ -1036,11 +843,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="81"
+            line="80"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="83"
+            line="82"
             column="10"/>
     </issue>
 
@@ -1057,11 +864,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="84"
+            line="83"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="86"
+            line="85"
             column="10"/>
     </issue>
 
@@ -1078,11 +885,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="87"
+            line="86"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="89"
+            line="88"
             column="10"/>
     </issue>
 
@@ -1099,11 +906,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="90"
+            line="89"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="92"
+            line="91"
             column="10"/>
     </issue>
 
@@ -1120,11 +927,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="91"
+            line="90"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="93"
+            line="92"
             column="10"/>
     </issue>
 
@@ -1141,11 +948,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="92"
+            line="91"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="94"
+            line="93"
             column="10"/>
     </issue>
 
@@ -1162,11 +969,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="93"
+            line="92"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="95"
+            line="94"
             column="10"/>
     </issue>
 
@@ -1183,11 +990,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="94"
+            line="93"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="96"
+            line="95"
             column="10"/>
     </issue>
 
@@ -1204,11 +1011,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="95"
+            line="94"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="97"
+            line="96"
             column="10"/>
     </issue>
 
@@ -1225,11 +1032,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="96"
+            line="95"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="98"
+            line="97"
             column="10"/>
     </issue>
 
@@ -1246,11 +1053,11 @@
         quickfix="studio">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values/strings.xml"
-            line="98"
+            line="97"
             column="10"/>
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android/src/main/res/values-es/strings.xml"
-            line="100"
+            line="99"
             column="10"/>
     </issue>
 

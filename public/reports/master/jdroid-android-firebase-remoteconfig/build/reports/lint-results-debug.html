@@ -176,15 +176,15 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 2 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Wed Mar 21 17:28:09 UTC 2018      </nav>
+Check performed at Thu Mar 22 02:50:22 UTC 2018      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (1)</a>
       <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (1)</a>
+      <a class="mdl-navigation__link" href="#LabelFor"><i class="material-icons warning-icon">warning</i>Missing <code>labelFor</code> attribute (1)</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -197,68 +197,21 @@ Check performed at Wed Mar 21 17:28:09 UTC 2018      </nav>
   </div>
               <div class="mdl-card__supporting-text">
 <table class="overview">
-<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
-</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#StaticFieldLeak">StaticFieldLeak</a>: Static Field Leaks</td></tr>
+<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Accessibility">Accessibility</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#LabelFor">LabelFor</a>: Missing <code>labelFor</code> attribute</td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (30)</a>
 </td></tr></table>
 <br/>              </div>
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="OverviewCardLink" onclick="hideid('OverviewCard');">
-Dismiss</button>            </div>
-            </div>
-          </section>
-<a name="Correctness"></a>
-<a name="GradleDependency"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDependencyCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Obsolete Gradle Dependency</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:21</span>: <span class="message">A newer version of com.google.firebase:firebase-config than 11.8.0 is available: 12.0.0</span><br /><pre class="errorlines">
-<span class="lineno"> 18 </span>
-<span class="lineno"> 19 </span>    api project(<span class="string">":jdroid-android"</span>)
-<span class="lineno"> 20 </span>
-<span class="caretline"><span class="lineno"> 21 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-config:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 22 </span>
-<span class="lineno"> 23 </span>    testImplementation <span class="string">"junit:junit:${JUNIT_VERSION}"</span>
-<span class="lineno"> 24 </span>    testImplementation <span class="string">"org.robolectric:robolectric:${ROBOLECTRIC_VERSION}"</span></pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
-This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">GradleDependency</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Correctness</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 4/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
 Dismiss</button>            </div>
             </div>
           </section>
@@ -272,7 +225,7 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/jdroid/android/firebase/remoteconfig/FirebaseRemoteConfigHelper.java">../../src/main/java/com/jdroid/android/firebase/remoteconfig/FirebaseRemoteConfigHelper.java</a>:39</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseRemoteConfig</code> which has field <code>mContext</code> pointing to <code>Context</code>); this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="location"><a href="../../src/main/java/com/jdroid/android/firebase/remoteconfig/FirebaseRemoteConfigHelper.java">../../src/main/java/com/jdroid/android/firebase/remoteconfig/FirebaseRemoteConfigHelper.java</a>:39</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseRemoteConfig</code> which has field <code>zzf</code> pointing to <code>Context</code>); this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
 <span class="lineno">  36 </span>
 <span class="lineno">  37 </span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String MOCKS_ENABLED = <span class="string">"firebase.remote.config.mocks.enabled"</span>;
 <span class="lineno">  38 </span>
@@ -311,6 +264,55 @@ ViewModel classes should never point to Views or non-application Contexts.<br/>T
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationStaticFieldLeakLink" onclick="reveal('explanationStaticFieldLeak');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="StaticFieldLeakCardLink" onclick="hideid('StaticFieldLeakCard');">
+Dismiss</button>            </div>
+            </div>
+          </section>
+<a name="Accessibility"></a>
+<a name="LabelFor"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="LabelForCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Missing labelFor attribute</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/debug/res/layout/jdroid_firebase_remote_config_param.xml">../../src/debug/res/layout/jdroid_firebase_remote_config_param.xml</a>:12</span>: <span class="message">No label views point to this text field with an <code>android:labelFor="@+id/value"</code> attribute</span><br /><pre class="errorlines">
+<span class="lineno">  9 </span>
+<span class="lineno"> 10 </span>        <span class="tag">&lt;LinearLayout</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"horizontal"</span>>
+<span class="lineno"> 11 </span>
+<span class="caretline"><span class="lineno"> 12 </span>            <span class="warning"><span class="tag">&lt;EditText</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/value"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"0dp"</span> <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"text"</span> <span class="prefix">tools:</span><span class="attribute">text</span>=<span class="value">"value"</span> /></span></span>
+<span class="lineno"> 13 </span>
+<span class="lineno"> 14 </span>            <span class="tag">&lt;TextView</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/source"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span> <span class="prefix">tools:</span><span class="attribute">text</span>=<span class="value">"Source: aaa"</span>
+<span class="lineno"> 15 </span>                    <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"8dp"</span> />
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationLabelFor" style="display: none;">
+Text fields should be labelled with a <code>labelFor</code> attribute, provided your <code>minSdkVersion</code> is at least 17.<br/>
+<br/>
+If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint.<br/>To suppress this error, use the issue id "LabelFor" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">LabelFor</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Accessibility</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 2/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationLabelForLink" onclick="reveal('explanationLabelFor');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="LabelForCardLink" onclick="hideid('LabelForCard');">
 Dismiss</button>            </div>
             </div>
           </section>
