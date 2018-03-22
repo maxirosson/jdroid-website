@@ -259,22 +259,9 @@
     </issue>
 
     <issue
-        id="ConvertToWebp"
-        severity="Warning"
-        message="One or more images in this project can be converted to the WebP format which typically results in smaller file sizes, even for lossless conversion (but launcher icons should use PNG)."
-        category="Usability:Icons"
-        priority="6"
-        summary="Convert to WebP"
-        explanation="The WebP format is typically more compact than PNG and JPEG. As of Android 4.2.1 it supports transparency and lossless conversion as well. Note that there is a quickfix in the IDE which lets you perform conversion.&#xA;&#xA;Launcher icons must be in the PNG format."
-        quickfix="studio">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/drawable-xxhdpi/hero.png"/>
-    </issue>
-
-    <issue
         id="IconDensities"
         severity="Warning"
-        message="Missing the following drawables in `drawable-hdpi`: hero.png, marker.png"
+        message="Missing the following drawables in `drawable-hdpi`: hero.webp, marker.webp"
         category="Usability:Icons"
         priority="4"
         summary="Icon densities validation"
@@ -288,7 +275,7 @@
     <issue
         id="IconDensities"
         severity="Warning"
-        message="Missing the following drawables in `drawable-mdpi`: hero.png, marker.png"
+        message="Missing the following drawables in `drawable-mdpi`: hero.webp, marker.webp"
         category="Usability:Icons"
         priority="4"
         summary="Icon densities validation"
@@ -302,7 +289,7 @@
     <issue
         id="IconDensities"
         severity="Warning"
-        message="Missing the following drawables in `drawable-xhdpi`: hero.png, marker.png"
+        message="Missing the following drawables in `drawable-xhdpi`: hero.webp, marker.webp"
         category="Usability:Icons"
         priority="4"
         summary="Icon densities validation"
@@ -311,70 +298,6 @@
         urls="http://developer.android.com/guide/practices/screens_support.html">
         <location
             file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/drawable-xhdpi"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Success or UnexpectedException.&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="  &lt;TextView android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;Success or UnexpectedException.&quot; android:layout_marginTop=&quot;8dp&quot;/>"
-        errorLine2="                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/layout/service_fragment.xml"
-            line="16"
-            column="86"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Success or UnexpectedException&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="  &lt;TextView android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;Success or UnexpectedException&quot; android:layout_marginTop=&quot;8dp&quot;/>"
-        errorLine2="                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/layout/service_fragment.xml"
-            line="20"
-            column="86"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Success or ConnectionException&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="  &lt;TextView android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;Success or ConnectionException&quot; android:layout_marginTop=&quot;8dp&quot;/>"
-        errorLine2="                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/layout/service_fragment.xml"
-            line="24"
-            column="86"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Success after 30 seconds&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="  &lt;TextView android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;Success after 30 seconds&quot; android:layout_marginTop=&quot;8dp&quot;/>"
-        errorLine2="                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/layout/service_fragment.xml"
-            line="28"
-            column="86"/>
     </issue>
 
 </issues>

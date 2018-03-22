@@ -173,10 +173,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 23 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 18 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Thu Mar 22 22:47:35 UTC 2018      </nav>
+Check performed at Thu Mar 22 23:12:52 UTC 2018      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -186,9 +186,7 @@ Check performed at Thu Mar 22 22:47:35 UTC 2018      </nav>
       <a class="mdl-navigation__link" href="#Overdraw"><i class="material-icons warning-icon">warning</i>Overdraw: Painting regions more than once (6)</a>
       <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (7)</a>
       <a class="mdl-navigation__link" href="#UselessLeaf"><i class="material-icons warning-icon">warning</i>Useless leaf layout (2)</a>
-      <a class="mdl-navigation__link" href="#ConvertToWebp"><i class="material-icons warning-icon">warning</i>Convert to WebP (1)</a>
       <a class="mdl-navigation__link" href="#IconDensities"><i class="material-icons warning-icon">warning</i>Icon densities validation (3)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (4)</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -215,16 +213,8 @@ Check performed at Thu Mar 22 22:47:35 UTC 2018      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
 </td></tr>
 <tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#ConvertToWebp">ConvertToWebp</a>: Convert to WebP</td></tr>
-<tr>
 <td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#IconDensities">IconDensities</a>: Icon densities validation</td></tr>
-<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
-</td></tr>
-<tr>
-<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (30)</a>
 </td></tr></table>
 <br/>              </div>
@@ -481,49 +471,7 @@ Dismiss</button>            </div>
             </div>
           </section>
 <a name="Usability:Icons"></a>
-<a name="ConvertToWebp"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="ConvertToWebpCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Convert to WebP</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/drawable-xxhdpi/hero.png">../../src/main/res/drawable-xxhdpi/hero.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/drawable-xxhdpi/hero.png" /><span class="message">One or more images in this project can be converted to the WebP format which typically results in smaller file sizes, even for lossless conversion (but launcher icons should use PNG).</span><br clear="right"/>
-</div>
-<div class="metadata"><div class="explanation" id="explanationConvertToWebp" style="display: none;">
-The WebP format is typically more compact than PNG and JPEG. As of Android 4.2.1 it supports transparency and lossless conversion as well. Note that there is a quickfix in the IDE which lets you perform conversion.<br/>
-<br/>
-Launcher icons must be in the PNG format.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "ConvertToWebp" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">ConvertToWebp</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Icons</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Usability</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 6/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationConvertToWebpLink" onclick="reveal('explanationConvertToWebp');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="ConvertToWebpCardLink" onclick="hideid('ConvertToWebpCard');">
-Dismiss</button>            </div>
-            </div>
-          </section><a name="IconDensities"></a>
+<a name="IconDensities"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="IconDensitiesCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
@@ -532,9 +480,9 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/drawable-hdpi">../../src/main/res/drawable-hdpi</a></span>: <span class="message">Missing the following drawables in <code>drawable-hdpi</code>: hero.png, marker.png</span><br />
-<span class="location"><a href="../../src/main/res/drawable-mdpi">../../src/main/res/drawable-mdpi</a></span>: <span class="message">Missing the following drawables in <code>drawable-mdpi</code>: hero.png, marker.png</span><br />
-<span class="location"><a href="../../src/main/res/drawable-xhdpi">../../src/main/res/drawable-xhdpi</a></span>: <span class="message">Missing the following drawables in <code>drawable-xhdpi</code>: hero.png, marker.png</span><br />
+<span class="location"><a href="../../src/main/res/drawable-hdpi">../../src/main/res/drawable-hdpi</a></span>: <span class="message">Missing the following drawables in <code>drawable-hdpi</code>: hero.webp, marker.webp</span><br />
+<span class="location"><a href="../../src/main/res/drawable-mdpi">../../src/main/res/drawable-mdpi</a></span>: <span class="message">Missing the following drawables in <code>drawable-mdpi</code>: hero.webp, marker.webp</span><br />
+<span class="location"><a href="../../src/main/res/drawable-xhdpi">../../src/main/res/drawable-xhdpi</a></span>: <span class="message">Missing the following drawables in <code>drawable-xhdpi</code>: hero.webp, marker.webp</span><br />
 </div>
 <div class="metadata"><div class="explanation" id="explanationIconDensities" style="display: none;">
 Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.<br/>
@@ -568,85 +516,6 @@ Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id
 Dismiss</button>            </div>
             </div>
           </section>
-<a name="Internationalization"></a>
-<a name="HardcodedText"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="HardcodedTextCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Hardcoded text</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/service_fragment.xml">../../src/main/res/layout/service_fragment.xml</a>:16</span>: <span class="message">Hardcoded string "Success or UnexpectedException.", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 13 </span>        <span class="tag">&lt;Button</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/useCaseService"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 14 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/useCaseService"</span> />
-<span class="lineno"> 15 </span>
-<span class="caretline"><span class="lineno"> 16 </span>        <span class="tag">&lt;TextView</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span> <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Success or UnexpectedException."</span></span> <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>/></span>
-<span class="lineno"> 17 </span>        <span class="tag">&lt;Button</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/firebaseJobService"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 18 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/firebaseJobService"</span> />
-</pre>
-
-<span class="location"><a href="../../src/main/res/layout/service_fragment.xml">../../src/main/res/layout/service_fragment.xml</a>:20</span>: <span class="message">Hardcoded string "Success or UnexpectedException", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 17 </span>        <span class="tag">&lt;Button</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/firebaseJobService"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 18 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/firebaseJobService"</span> />
-<span class="lineno"> 19 </span>
-<span class="caretline"><span class="lineno"> 20 </span>        <span class="tag">&lt;TextView</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span> <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Success or UnexpectedException"</span></span> <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>/></span>
-<span class="lineno"> 21 </span>        <span class="tag">&lt;Button</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/commandService1"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 22 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/commandService1"</span> />
-</pre>
-
-<span class="location"><a href="../../src/main/res/layout/service_fragment.xml">../../src/main/res/layout/service_fragment.xml</a>:24</span>: <span class="message">Hardcoded string "Success or ConnectionException", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 21 </span>        <span class="tag">&lt;Button</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/commandService1"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 22 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/commandService1"</span> />
-<span class="lineno"> 23 </span>
-<span class="caretline"><span class="lineno"> 24 </span>        <span class="tag">&lt;TextView</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span> <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Success or ConnectionException"</span></span> <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>/></span>
-<span class="lineno"> 25 </span>        <span class="tag">&lt;Button</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/commandService2"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 26 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/commandService2"</span> />
-</pre>
-
-<span class="location"><a href="../../src/main/res/layout/service_fragment.xml">../../src/main/res/layout/service_fragment.xml</a>:28</span>: <span class="message">Hardcoded string "Success after 30 seconds", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 25 </span>        <span class="tag">&lt;Button</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/commandService2"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 26 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/commandService2"</span> />
-<span class="lineno"> 27 </span>
-<span class="caretline"><span class="lineno"> 28 </span>        <span class="tag">&lt;TextView</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span> <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Success after 30 seconds"</span></span> <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>/></span>
-<span class="lineno"> 29 </span>        <span class="tag">&lt;Button</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/commandService3"</span> <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span> <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 30 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/commandService3"</span> />
-</pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationHardcodedText" style="display: none;">
-Hardcoding text attributes directly in layout files is bad for several reasons:<br/>
-<br/>
-* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)<br/>
-<br/>
-* The application cannot be translated to other languages by just adding new translations for existing string resources.<br/>
-<br/>
-There are quickfixes to automatically extract this hardcoded string into a resource lookup.<br/>To suppress this error, use the issue id "HardcodedText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">HardcodedText</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Internationalization</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 5/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationHardcodedTextLink" onclick="reveal('explanationHardcodedText');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="HardcodedTextCardLink" onclick="hideid('HardcodedTextCard');">
-Dismiss</button>            </div>
-            </div>
-          </section>
 <a name="MissingIssues"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="MissingIssuesCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -659,17 +528,6 @@ because the check is not enabled by default, or because
 it was disabled with a command line flag or via one or 
 more <code>lint.xml</code> configuration files in the project directories.
 <div id="SuppressedIssues" style="display: none;"><br/><br/><div class="issue">
-<div class="id">AppCompatResource<div class="issueSeparator"></div>
-</div>
-<div class="metadata">Disabled By: Project lint.xml file<br/>
-<div class="explanation">
-When using the appcompat library, menu resources should refer to the <code>showAsAction</code> in the <code>app:</code> namespace, not the <code>android:</code> namespace.<br/>
-<br/>
-Similarly, when <b>not</b> using the appcompat library, you should be using the <code>android:showAsAction</code> attribute.<br/>To suppress this error, use the issue id "AppCompatResource" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">AppLinksAutoVerifyError<div class="issueSeparator"></div>
 </div>
 <div class="metadata">Disabled By: Default<br/>
@@ -713,6 +571,18 @@ Note that elements in application screens that are purely decorative and do not 
 <br/>
 Note that for text fields, you should not set both the <code>hint</code> and the <code>contentDescription</code> attributes since the hint will never be shown. Just set the <code>hint</code>. See <a href="http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases">http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases</a>.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
 To suppress this error, use the issue id "ContentDescription" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">ConvertToWebp<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+The WebP format is typically more compact than PNG and JPEG. As of Android 4.2.1 it supports transparency and lossless conversion as well. Note that there is a quickfix in the IDE which lets you perform conversion.<br/>
+<br/>
+Launcher icons must be in the PNG format.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "ConvertToWebp" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
