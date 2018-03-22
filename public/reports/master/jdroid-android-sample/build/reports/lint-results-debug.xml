@@ -259,6 +259,19 @@
     </issue>
 
     <issue
+        id="ConvertToWebp"
+        severity="Warning"
+        message="One or more images in this project can be converted to the WebP format which typically results in smaller file sizes, even for lossless conversion (but launcher icons should use PNG)."
+        category="Usability:Icons"
+        priority="6"
+        summary="Convert to WebP"
+        explanation="The WebP format is typically more compact than PNG and JPEG. As of Android 4.2.1 it supports transparency and lossless conversion as well. Note that there is a quickfix in the IDE which lets you perform conversion.&#xA;&#xA;Launcher icons must be in the PNG format."
+        quickfix="studio">
+        <location
+            file="/home/travis/build/maxirosson/jdroid/jdroid-android-sample/src/main/res/drawable-xxhdpi/hero.png"/>
+    </issue>
+
+    <issue
         id="IconDensities"
         severity="Warning"
         message="Missing the following drawables in `drawable-hdpi`: hero.png, marker.png"
