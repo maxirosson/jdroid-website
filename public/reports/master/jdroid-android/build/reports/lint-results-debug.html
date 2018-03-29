@@ -173,10 +173,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 80 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 87 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Mar 26 11:00:44 UTC 2018      </nav>
+Check performed at Thu Mar 29 15:15:42 UTC 2018      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -184,8 +184,8 @@ Check performed at Mon Mar 26 11:00:44 UTC 2018      </nav>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#CustomViewStyleable"><i class="material-icons warning-icon">warning</i>Mismatched Styleable/Custom View Name (3)</a>
-      <a class="mdl-navigation__link" href="#UnusedAttribute"><i class="material-icons warning-icon">warning</i>Attribute unused on older versions (1)</a>
       <a class="mdl-navigation__link" href="#InflateParams"><i class="material-icons warning-icon">warning</i>Layout Inflation without a Parent (1)</a>
+      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (8)</a>
       <a class="mdl-navigation__link" href="#GetInstance"><i class="material-icons warning-icon">warning</i>Cipher.getInstance with ECB (1)</a>
       <a class="mdl-navigation__link" href="#ExportedReceiver"><i class="material-icons warning-icon">warning</i>Receiver does not require permission (1)</a>
       <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (1)</a>
@@ -215,10 +215,10 @@ Check performed at Mon Mar 26 11:00:44 UTC 2018      </nav>
 <a href="#CustomViewStyleable">CustomViewStyleable</a>: Mismatched Styleable/Custom View Name</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#UnusedAttribute">UnusedAttribute</a>: Attribute unused on older versions</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#InflateParams">InflateParams</a>: Layout Inflation without a Parent</td></tr>
+<tr>
+<td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Security">Security</a>
 </td></tr>
 <tr>
@@ -333,55 +333,6 @@ The convention for custom views is to use a <code>declare-styleable</code> whose
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="CustomViewStyleableCardLink" onclick="hideid('CustomViewStyleableCard');">
 Dismiss</button>            </div>
             </div>
-          </section><a name="UnusedAttribute"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="UnusedAttributeCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Attribute unused on older versions</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/drawable/jdroid_ic_twitter_24dp.xml">../../src/main/res/drawable/jdroid_ic_twitter_24dp.xml</a>:8</span>: <span class="message">Attribute <code>fillType</code> is only used in API level 24 and higher (current min is 19)</span><br /><pre class="errorlines">
-<span class="lineno">  5 </span>        <span class="prefix">android:</span><span class="attribute">viewportHeight</span>=<span class="value">"67.0"</span>>
-<span class="lineno">  6 </span>    <span class="tag">&lt;path</span><span class="attribute">
-</span><span class="lineno">  7 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">fillColor</span>=<span class="value">"#598DCA"</span>
-<span class="caretline"><span class="lineno">  8 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">fillType</span>=<span class="value">"evenOdd"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  9 </span>        <span class="prefix">android:</span><span class="attribute">pathData</span>=<span class="value">"M37.17,22.28c-2.62,0.95 -4.27,3.41 -4.09,6.1l0.06,1.04l-1.05,-0.13c-3.81,-0.49 -7.14,-2.14 -9.97,-4.91l-1.38,-1.38l-0.36,1.02c-0.75,2.27 -0.27,4.66 1.3,6.27c0.84,0.89 0.65,1.02 -0.8,0.49c-0.5,-0.17 -0.94,-0.3 -0.99,-0.23c-0.15,0.15 0.36,2.08 0.75,2.84c0.55,1.06 1.65,2.1 2.87,2.71l1.03,0.49l-1.22,0.02c-1.17,0 -1.22,0.02 -1.09,0.47c0.42,1.38 2.07,2.84 3.92,3.47l1.3,0.44l-1.13,0.68c-1.68,0.98 -3.65,1.52 -5.62,1.57C19.77,43.26 19,43.34 19,43.4c0,0.21 2.56,1.4 4.04,1.86c4.46,1.38 9.77,0.78 13.75,-1.57c2.83,-1.67 5.66,-5 6.98,-8.22c0.71,-1.72 1.42,-4.85 1.42,-6.36c0,-0.98 0.06,-1.1 1.24,-2.27c0.69,-0.68 1.34,-1.42 1.47,-1.63c0.21,-0.4 0.19,-0.4 -0.88,-0.04c-1.78,0.64 -2.03,0.55 -1.15,-0.4c0.65,-0.68 1.42,-1.91 1.42,-2.27c0,-0.06 -0.31,0.04 -0.67,0.23c-0.38,0.21 -1.22,0.53 -1.84,0.72l-1.13,0.36l-1.03,-0.7c-0.57,-0.38 -1.36,-0.81 -1.78,-0.93C39.77,21.9 38.13,21.94 37.17,22.28zM3,4h60v60H3V4z"</span>/>
-<span class="lineno"> 10 </span><span class="tag">&lt;/vector></span>
-</pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationUnusedAttribute" style="display: none;">
-This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the <code>minSdkVersion</code> attribute).<br/>
-<br/>
-This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance or functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.<br/>
-<br/>
-Note: This check does not only apply to attributes. For example, some tags can be unused too, such as the new <code>&lt;tag></code> element in layouts introduced in API 21.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "UnusedAttribute" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">UnusedAttribute</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Correctness</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 6/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationUnusedAttributeLink" onclick="reveal('explanationUnusedAttribute');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="UnusedAttributeCardLink" onclick="hideid('UnusedAttributeCard');">
-Dismiss</button>            </div>
-            </div>
           </section><a name="InflateParams"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="InflateParamsCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -426,6 +377,114 @@ When inflating a layout, avoid passing in null as the parent view, since otherwi
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationInflateParamsLink" onclick="reveal('explanationInflateParams');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="InflateParamsCardLink" onclick="hideid('InflateParamsCard');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="GradleDependency"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDependencyCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Obsolete Gradle Dependency</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:33</span>: <span class="message">A newer version of com.google.android.gms:play-services-analytics than 12.0.0 is available: 12.0.1</span><br /><pre class="errorlines">
+<span class="lineno"> 30 </span>    api <span class="string">"com.android.support:appcompat-v7:${ANDROID_SUPPORT_VERSION}"</span>
+<span class="lineno"> 31 </span>    api <span class="string">"com.android.support:cardview-v7:${ANDROID_SUPPORT_VERSION}"</span>
+<span class="lineno"> 32 </span>
+<span class="caretline"><span class="lineno"> 33 </span>    <span class="warning">api <span class="string">"com.google.android.gms:play-services-analytics:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 34 </span>    api <span class="string">"com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 35 </span>    api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+</pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:34</span>: <span class="message">A newer version of com.google.android.gms:play-services-base than 12.0.0 is available: 12.0.1</span><br /><pre class="errorlines">
+<span class="lineno"> 31 </span>    api <span class="string">"com.android.support:cardview-v7:${ANDROID_SUPPORT_VERSION}"</span>
+<span class="lineno"> 32 </span>
+<span class="lineno"> 33 </span>    api <span class="string">"com.google.android.gms:play-services-analytics:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 34 </span>    <span class="warning">api <span class="string">"com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 35 </span>    api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 36 </span>
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:35</span>: <span class="message">A newer version of com.google.android.gms:play-services-location than 12.0.0 is available: 12.0.1</span><br /><pre class="errorlines">
+<span class="lineno"> 32 </span>
+<span class="lineno"> 33 </span>    api <span class="string">"com.google.android.gms:play-services-analytics:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 34 </span>    api <span class="string">"com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 35 </span>    <span class="warning">api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 36 </span>
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:37</span>: <span class="message">A newer version of com.google.firebase:firebase-core than 12.0.0 is available: 12.0.1</span><br /><pre class="errorlines">
+<span class="lineno"> 34 </span>    api <span class="string">"com.google.android.gms:play-services-base:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 35 </span>    api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 36 </span>
+<span class="caretline"><span class="lineno"> 37 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 39 </span>    api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 40 </span>    api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:38</span>: <span class="message">A newer version of com.google.firebase:firebase-appindexing than 12.0.0 is available: 12.0.1</span><br /><pre class="errorlines">
+<span class="lineno"> 35 </span>    api <span class="string">"com.google.android.gms:play-services-location:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 36 </span>
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 38 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 39 </span>    api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 40 </span>    api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 41 </span>    api <span class="string">"com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}"</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:39</span>: <span class="message">A newer version of com.google.firebase:firebase-messaging than 12.0.0 is available: 12.0.1</span><br /><pre class="errorlines">
+<span class="lineno"> 36 </span>
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 39 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 40 </span>    api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 41 </span>    api <span class="string">"com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+</pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:40</span>: <span class="message">A newer version of com.google.firebase:firebase-invites than 12.0.0 is available: 12.0.1</span><br /><pre class="errorlines">
+<span class="lineno"> 37 </span>    api <span class="string">"com.google.firebase:firebase-core:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 39 </span>    api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 40 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 41 </span>    api <span class="string">"com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 42 </span>
+<span class="lineno"> 43 </span>    <span class="comment">// https://github.com/firebase/firebase-jobdispatcher-android/releases</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:41</span>: <span class="message">A newer version of com.google.firebase:firebase-perf than 12.0.0 is available: 12.0.1</span><br /><pre class="errorlines">
+<span class="lineno"> 38 </span>    api <span class="string">"com.google.firebase:firebase-appindexing:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 39 </span>    api <span class="string">"com.google.firebase:firebase-messaging:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="lineno"> 40 </span>    api <span class="string">"com.google.firebase:firebase-invites:${GOOGLE_PLAY_SERVICES_VERSION}"</span>
+<span class="caretline"><span class="lineno"> 41 </span>    <span class="warning">api <span class="string">"com.google.firebase:firebase-perf:${GOOGLE_PLAY_SERVICES_VERSION}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 42 </span>
+<span class="lineno"> 43 </span>    <span class="comment">// https://github.com/firebase/firebase-jobdispatcher-android/releases</span>
+<span class="lineno"> 44 </span>    api <span class="string">'com.firebase:firebase-jobdispatcher:0.8.5'</span></pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
+This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">GradleDependency</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 4/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
 Dismiss</button>            </div>
             </div>
           </section>
@@ -496,7 +555,8 @@ Dismiss</button>            </div>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationExportedReceiver" style="display: none;">
-Exported receivers (receivers which either set <code>exported=true</code> or contain an intent-filter and do not specify <code>exported=false</code>) should define a permission that an entity must have in order to launch the receiver or bind to it. Without this, any application can use this receiver.<br/>To suppress this error, use the issue id "ExportedReceiver" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+Exported receivers (receivers which either set <code>exported=true</code> or contain an intent-filter and do not specify <code>exported=false</code>) should define a permission that an entity must have in order to launch the receiver or bind to it. Without this, any application can use this receiver.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "ExportedReceiver" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -1679,7 +1739,8 @@ To suppress this error, use the issue id "NewerVersionAvailable" as explained in
 <div class="metadata">Disabled By: Default<br/>
 <div class="explanation">
 The <code>&lt;uses-permission></code> element should not require a permission that implies an unsupported Chrome OS hardware feature. Google Play assumes that certain hardware related permissions indicate that the underlying hardware features are required by default. To fix the issue, consider declaring the corresponding uses-feature element with <code>required="false"</code> attribute.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/topic/arc/manifest.html#implied-features">https://developer.android.com/topic/arc/manifest.html#implied-features</a>
-</div>To suppress this error, use the issue id "PermissionImpliesUnsupportedChromeOsHardware" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "PermissionImpliesUnsupportedChromeOsHardware" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -1726,7 +1787,8 @@ Using <code>Gravity#LEFT</code> and <code>Gravity#RIGHT</code> can lead to probl
 <br/>
 For XML attributes such as paddingLeft and <code>layout_marginLeft</code>, use <code>paddingStart</code> and <code>layout_marginStart</code>. <b>NOTE</b>: If your <code>minSdkVersion</code> is less than 17, you should add <b>both</b> the older left/right attributes <b>as well as</b> the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.<br/>
 <br/>
-(Note: For <code>Gravity#LEFT</code> and <code>Gravity#START</code>, you can use these constants even when targeting older platforms, because the <code>start</code> bitmask is a superset of the <code>left</code> bitmask. Therefore, you can use <code>gravity="start"</code> rather than <code>gravity="left|start"</code>.)<br/>To suppress this error, use the issue id "RtlHardcoded" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+(Note: For <code>Gravity#LEFT</code> and <code>Gravity#START</code>, you can use these constants even when targeting older platforms, because the <code>start</code> bitmask is a superset of the <code>left</code> bitmask. Therefore, you can use <code>gravity="start"</code> rather than <code>gravity="left|start"</code>.)<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "RtlHardcoded" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -1756,7 +1818,7 @@ To suppress this error, use the issue id "SelectableText" as explained in the <a
 </div>
 <div class="metadata">Disabled By: Default<br/>
 <div class="explanation">
-Using the comment <code>// STOPSHIP</code> can be used to flag code that is incomplete but checked in. This comment marker can be used to indicate that the code should not be shipped until the issue is addressed, and lint will look for these.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+Using the comment <code>// STOPSHIP</code> can be used to flag code that is incomplete but checked in. This comment marker can be used to indicate that the code should not be shipped until the issue is addressed, and lint will look for these.  In Gradle projects, this is only checked for non-debug (release) builds.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
 To suppress this error, use the issue id "StopShip" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
@@ -1794,7 +1856,8 @@ This is sometimes intentional, for example where you are referring to a view whi
 <div class="explanation">
 This app loads native libraries using <code>System.loadLibrary()</code>.<br/>
 <br/>
-Consider adding <code>android:extractNativeLibs="false"</code> to the <code>&lt;application></code> tag in AndroidManifest.xml. Starting with Android 6.0, this will make installation faster, the app will take up less space on the device and updates will have smaller download sizes.<br/>To suppress this error, use the issue id "UnpackedNativeCode" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+Consider adding <code>android:extractNativeLibs="false"</code> to the <code>&lt;application></code> tag in AndroidManifest.xml. Starting with Android 6.0, this will make installation faster, the app will take up less space on the device and updates will have smaller download sizes.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "UnpackedNativeCode" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
@@ -1804,7 +1867,8 @@ Consider adding <code>android:extractNativeLibs="false"</code> to the <code>&lt;
 <div class="metadata">Disabled By: Default<br/>
 <div class="explanation">
 The <code>&lt;uses-feature></code> element should not require this unsupported Chrome OS hardware feature. Any uses-feature not explicitly marked with <code>required="false"</code> is necessary on the device to be installed on. Ensure that any features that might prevent it from being installed on a Chrome OS device are reviewed and marked as not required in the manifest.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/topic/arc/manifest.html#incompat-entries">https://developer.android.com/topic/arc/manifest.html#incompat-entries</a>
-</div>To suppress this error, use the issue id "UnsupportedChromeOsHardware" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "UnsupportedChromeOsHardware" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
